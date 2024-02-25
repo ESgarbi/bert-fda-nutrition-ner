@@ -1,2 +1,8 @@
-# bert-fda-nutrition-ner
-A PyTorch NER model based on bert-base-uncased, fine-tuned to classify FDA nutritional entities like vitamins, proteins, etc. It serves as a learning/testing tool, showcasing ML's potential in nutritional data analysis.
+# sgarbi/bert-fda-nutrition-ner
+
+This repository presents a PyTorch implementation of a BERT-based Named Entity Recognition (NER) model meticulously fine-tuned to identify and classify nutritional components in accordance with FDA guidelines. Built on the `bert-base-uncased` architecture, it aims to provide precise identification of a wide array of nutritional entities such as vitamins, stimulants, proteins, and more, using the BIO tagging scheme for entity recognition.
+
+## License
+
+This project is shared under the MIT License. For more information, refer to the `LICENSE` file. While open-source, this project is developed and maintained exclusively by its creator, serving as a personal history exploring of NER technologies.
+
