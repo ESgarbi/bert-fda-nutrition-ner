@@ -6,10 +6,9 @@ from food_label_faker_vitamins import FoodLabelFakerVitamins
 from food_label_faker_minerals import FoodLabelFakerMinerals
 
 
-# Creating a 'faker' class to generate food label nutritional data
 class FoodLabelFaker:
     def __init__(self):
-        # Using the 'faker' library to generate random dates and times
+        
         self.fake = faker.Faker()
         self.fatty_acids = FoodLabelFakerFattyAcids()
         self.other = FoodLabelFakerOther()
@@ -104,7 +103,9 @@ class FoodLabelFaker:
 
 
     def generate_nutrient_value(self, unit):
+        
         # Define ranges for nutrient values depending on the unit
+        # TODO: perharps, shuffle it at the unit level too...
         ranges = {
             'kJ': (100, 3000),
             'g': (0, 100),

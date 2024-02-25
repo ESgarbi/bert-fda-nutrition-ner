@@ -22,7 +22,6 @@ import seqeval
 
 from seqeval.metrics import classification_report
 
-#from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
 from torch.utils.data import Dataset, DataLoader
 
@@ -105,7 +104,6 @@ class ProductLabelDataGenerator:
                 else:
                     name = name.replace(',', ' ').strip()
             else:
-                # split by comma and reverse the items
                 items = name.split(',')
                 items.reverse()
                 name = ' '.join(items).strip()
@@ -113,7 +111,6 @@ class ProductLabelDataGenerator:
             name = name.strip()
         
         if random.random() > .5:
-           # choose randomly between _misspell_word, _delete and _add_random_letter or all of them and return the result
             if random.random() > .5:
                 name = self._misspell_word(name)
             if random.random() > .5:
@@ -134,7 +131,7 @@ class ProductLabelDataGenerator:
         iob = []
         current_tag = []
         for word in words:
-            # trim word
+            
             word = word.strip()
             if  word.startswith("</") and word.endswith(">"):
                 current_tag = []
@@ -174,7 +171,7 @@ class ProductLabelDataGenerator:
                         
                         if count > total_lines:
                             break
-                        # show progress eery 10K files
+                        
                         if count % 10000 == 0:
                             print(f'{count} of {total_lines} processed')
                         line = line.rstrip(" ").rstrip(", ").rstrip("'").rstrip(' ').rstrip(",\n'")
@@ -182,8 +179,7 @@ class ProductLabelDataGenerator:
                         try:
                             json_line = json.loads(line)
                             data_label = ''
-                            # data_label = self._sequence_augmentation_1(json_line)
-                            # lines.append(self.augument(data_label))
+                            
                             if random.random() > .5:
                                 data_label = self._sequence_augmentation_1(json_line)
                             else:
@@ -192,8 +188,6 @@ class ProductLabelDataGenerator:
 
                         except Exception as e:
                             pass
-                        # Check if the line is valid and add to list
-                       
                         
                     except: 
                         pass
@@ -245,7 +239,6 @@ class ProductLabelDataGenerator:
     def get_category(self,category_id):
         
         if int(category_id) in self.nutrients.index:
-            # do a random 30 percent chance of returning the category
             
             return self.nutrients.loc[category_id]['Category'].upper().rstrip()
         return random.choice(self.nutrients['Category'].unique()).upper().rstrip()
@@ -278,9 +271,6 @@ class ProductLabelDataGenerator:
         return f'{random.choice([label_1, label_2, label_3, label_4, label_5])}'
     
     def _sequence_augmentation_1(self, data):
-        """
-        Formats the food data into an ASCII table representation.
-        """
         from prettytable import PrettyTable
 
         # Create a table for basic information
@@ -441,7 +431,6 @@ class ProductLabelDataGenerator:
                 compiled_label = '\n'.join(text_context)
                 
             elif position == 4:
-                #insert into the third paragraph of the text_context
                 text_context = text_context.split('\n')
                 text_context.insert(2, compiled_label)
                 compiled_label = '\n'.join(text_context)
@@ -451,6 +440,7 @@ class ProductLabelDataGenerator:
         # iob is the actual main target training data
         # compiled_label is just the label in iob format
         # context is the text context that will be mixed with the label in iob format
+        # Perharps we can move it to the encoding stage inside the dataset.
          
         self.materialized_data[index] = (iob, compiled_label, self._generate_iob(context))
         

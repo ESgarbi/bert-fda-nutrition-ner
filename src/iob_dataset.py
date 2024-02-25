@@ -12,9 +12,6 @@ import tensorflow as tf
 from tensorflow.keras.callbacks import TensorBoard
 import datetime
 import os
-# Setting up the TensorBoard callback
-
-# model.fit(..., callbacks=[tensorboard_callback])
 from torch.utils.tensorboard import SummaryWriter
 import numpy as np
 
@@ -22,7 +19,6 @@ import seqeval
 
 from seqeval.metrics import classification_report
 
-#from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
 from torch.utils.data import Dataset, DataLoader
 
@@ -73,14 +69,11 @@ class IOBSyntheticDataset(Dataset):
 
         for word, label in zip(sentence, text_labels):
 
-            # Tokenize the word and count # of subwords the word is broken into
             tokenized_word = tokenizer.tokenize(word)
             n_subwords = len(tokenized_word)
 
-            # Add the tokenized word to the final tokenized word list
             tokenized_sentence.extend(tokenized_word)
 
-            # Add the same label to the new list of labels `n_subwords` times
             labels.extend([label] * n_subwords)
 
         return tokenized_sentence, labels
@@ -112,7 +105,7 @@ class IOBSyntheticDataset(Dataset):
             if self.internal_state != None:
                 return self.internal_state[index]
                 
-            # step 1: tokenize (and adapt corresponding labels)
+        
             #iob, compiled_label, context_iob_only = self.generator.get_data_sequence(index)
             #iob_df = pd.DataFrame(iob, columns=['words', 'tokens'])
             compiled_label = self.generator.data.iloc[index]['product_label_raw']
@@ -126,7 +119,7 @@ class IOBSyntheticDataset(Dataset):
            # word_labels = iob['tokens']
             tokenized_sentence, labels = self.tokenize_and_preserve_labels(sentence, word_labels, self.tokenizer)
             
-            # step 2: add special tokens (and corresponding labels)
+  
             tokenized_sentence = ["[CLS]"] + tokenized_sentence + ["[SEP]"] # add special tokens
             labels.insert(0, "O") # add outside label for [CLS] token
             labels.insert(-1, "O") # add outside label for [SEP] token
@@ -150,12 +143,7 @@ class IOBSyntheticDataset(Dataset):
             ids = self.tokenizer.convert_tokens_to_ids(tokenized_sentence)
 
             label_ids = [self.label2id[label.upper()] for label in labels]
-            # the following line is deprecated
-            #label_ids = [label if label != 0 else -100 for label in label_ids]
-            # tokenized_sentence['ids'] =  torch.tensor(ids, dtype=torch.long)
-            # tokenized_sentence['mask'] =  torch.tensor(attn_mask, dtype=torch.long)
-            # tokenized_sentence['targets'] =  torch.tensor(label_ids, dtype=torch.long)
-            # return tokenized_sentence
+
 
             return {
                 'input_ids': torch.tensor(ids, dtype=torch.long),
@@ -344,14 +332,14 @@ class Trainer:
             current = current + 1
             percent_complete = (current + 1) / total_count * 100
 
-            # save on every %5 completed
+            
             if current == 1500:
-                print('saving on percentaget completion..')
-                __save(idx)
+                print('_save')
+                
                 train_dataset.save_state()
                 writer.flush()
                 current = 0
-            # print hello every 200
+            
             save_count = save_count + 1
             if save_count == 200:
                 train_dataset.save_state()
@@ -377,7 +365,6 @@ class Trainer:
             flattened_targets = targets.view(-1) # shape (batch_size * seq_len,)
             active_logits = tr_logits.view(-1, model.num_labels) # shape (batch_size * seq_len, num_labels)
             flattened_predictions = torch.argmax(active_logits, axis=1) # shape (batch_size * seq_len,)
-            # now, use mask to determine where we should compare predictions with targets (includes [CLS] and [SEP] token predictions)
             active_accuracy = mask.view(-1) == 1 # active accuracy is also of shape (batch_size * seq_len,)
             targets = torch.masked_select(flattened_targets, active_accuracy)
             predictions = torch.masked_select(flattened_predictions, active_accuracy)
@@ -507,10 +494,10 @@ if '__main__' == __name__:
     dataset = load_dataset("yelp_review_full")
     
     trainer_arguments = {
-        "model_path": "/content/drive/MyDrive/ML/ner/v1/model_15",
+        "model_path": "/model_15",
         "exp_name": "v1",
         "context": dataset['train']['text'],
-        "output_path": "/content/drive/MyDrive/ML/ner", 
+        "output_path": "/ner_v15", 
         # TPU-GPU (16
         # TPU (8)
         # V-100 (16)
@@ -521,14 +508,12 @@ if '__main__' == __name__:
         "max_len": 512,
         "save_every_epoch": True,
         "epochs": 4,
-        "nutrients_table_path": "/content/food_ingredients_ner/src/data/nutrient.csv",
-        "json_data_source": "/content/drive/MyDrive/ML/ner/brandedDownload.json/brandedDownload.json"
+        "nutrients_table_path": "/nutrient.csv",
+        "json_data_source": "brandedDownload.json"
     }
     
     
     trainer = Trainer()
     trainer.train(**trainer_arguments)
 
-    pass
-    
     

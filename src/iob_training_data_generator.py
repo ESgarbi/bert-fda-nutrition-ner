@@ -559,7 +559,7 @@ class IOBTrainingDataGenerator():
                 
                 
                 
-                # step 2: add special tokens (and corresponding labels)
+                
                 tokenized_sentence = ["[CLS]"] + tokenized_sentence + ["[SEP]"] # add special tokens
                 labels.insert(0, "O") # add outside label for [CLS] token
                 labels.insert(-1, "O") # add outside label for [SEP] token
@@ -573,7 +573,8 @@ class IOBTrainingDataGenerator():
                     tokenized_sentence = tokenized_sentence + ['[PAD]'for _ in range(self.max_len - len(tokenized_sentence))]
                     labels = labels + ["O" for _ in range(self.max_len - len(labels))]
 
-                    # step 4: obtain the attention mask
+                    # with the attention mask, we can indicate to the model which tokens should be attended to, and which should not
+                    # Experiement on setting the attention mask to 1 for all tokens... 
                     attn_mask = [1 if tok != '[PAD]' else 0 for tok in tokenized_sentence]
                     
                     # step 5: convert tokens to input ids
@@ -722,14 +723,11 @@ class IOBTrainingDataGenerator():
 
         for word, label in state:
 
-            # Tokenize the word and count # of subwords the word is broken into
             tokenized_word = self.tokenizer.tokenize(word)
             n_subwords = len(tokenized_word)
 
-            # Add the tokenized word to the final tokenized word list
             tokenized_sentence.extend(tokenized_word)
 
-            # Add the same label to the new list of labels `n_subwords` times
             labels.extend([label] * n_subwords)
 
         return tokenized_sentence, labels

@@ -1,0 +1,594 @@
+{
+  "foodClass": "Branded",
+  "description": "PEANUT BUTTER & JELLY PUFFS SWEETENED CORN & OAT CEREAL, PEANUT BUTTER & JELLY PUFFS",
+  "foodNutrients": [
+    {
+      "type": "FoodNutrient",
+      "id": 13630298,
+      "nutrient": {
+        "id": 1003,
+        "number": "203",
+        "name": "Protein",
+        "rank": 600,
+        "unitName": "g"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 5.26
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630299,
+      "nutrient": {
+        "id": 1004,
+        "number": "204",
+        "name": "Total lipid (fat)",
+        "rank": 800,
+        "unitName": "g"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 9.21
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630300,
+      "nutrient": {
+        "id": 1005,
+        "number": "205",
+        "name": "Carbohydrate, by difference",
+        "rank": 1110,
+        "unitName": "g"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 79.0
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630301,
+      "nutrient": {
+        "id": 1008,
+        "number": "208",
+        "name": "Energy",
+        "rank": 300,
+        "unitName": "kcal"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 421
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630302,
+      "nutrient": {
+        "id": 2000,
+        "number": "269",
+        "name": "Sugars, total including NLEA",
+        "rank": 1510,
+        "unitName": "g"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 42.1
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630303,
+      "nutrient": {
+        "id": 1079,
+        "number": "291",
+        "name": "Fiber, total dietary",
+        "rank": 1200,
+        "unitName": "g"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 2.6
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630304,
+      "nutrient": {
+        "id": 1087,
+        "number": "301",
+        "name": "Calcium, Ca",
+        "rank": 5300,
+        "unitName": "mg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCD",
+        "description": "Calculated from a daily value percentage per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 0.0
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630305,
+      "nutrient": {
+        "id": 1089,
+        "number": "303",
+        "name": "Iron, Fe",
+        "rank": 5400,
+        "unitName": "mg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 9.47
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630306,
+      "nutrient": {
+        "id": 1092,
+        "number": "306",
+        "name": "Potassium, K",
+        "rank": 5700,
+        "unitName": "mg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCD",
+        "description": "Calculated from a daily value percentage per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 0.0
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630307,
+      "nutrient": {
+        "id": 1093,
+        "number": "307",
+        "name": "Sodium, Na",
+        "rank": 5800,
+        "unitName": "mg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 579
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630308,
+      "nutrient": {
+        "id": 1095,
+        "number": "309",
+        "name": "Zinc, Zn",
+        "rank": 5900,
+        "unitName": "mg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCD",
+        "description": "Calculated from a daily value percentage per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 7.89
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630309,
+      "nutrient": {
+        "id": 1110,
+        "number": "324",
+        "name": "Vitamin D (D2 + D3), International Units",
+        "rank": 8650,
+        "unitName": "IU"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCD",
+        "description": "Calculated from a daily value percentage per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 0.0
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630310,
+      "nutrient": {
+        "id": 1165,
+        "number": "404",
+        "name": "Thiamin",
+        "rank": 6400,
+        "unitName": "mg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCD",
+        "description": "Calculated from a daily value percentage per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 1.0
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630311,
+      "nutrient": {
+        "id": 1166,
+        "number": "405",
+        "name": "Riboflavin",
+        "rank": 6500,
+        "unitName": "mg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCD",
+        "description": "Calculated from a daily value percentage per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 0.895
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630312,
+      "nutrient": {
+        "id": 1167,
+        "number": "406",
+        "name": "Niacin",
+        "rank": 6600,
+        "unitName": "mg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCD",
+        "description": "Calculated from a daily value percentage per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 10.5
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630313,
+      "nutrient": {
+        "id": 1175,
+        "number": "415",
+        "name": "Vitamin B-6",
+        "rank": 6800,
+        "unitName": "mg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCD",
+        "description": "Calculated from a daily value percentage per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 1.05
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630314,
+      "nutrient": {
+        "id": 1186,
+        "number": "431",
+        "name": "Folic acid",
+        "rank": 7000,
+        "unitName": "µg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 487
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630315,
+      "nutrient": {
+        "id": 1235,
+        "number": "539",
+        "name": "Sugars, added",
+        "rank": 1540,
+        "unitName": "g"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 42.1
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630316,
+      "nutrient": {
+        "id": 1253,
+        "number": "601",
+        "name": "Cholesterol",
+        "rank": 15700,
+        "unitName": "mg"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCD",
+        "description": "Calculated from a daily value percentage per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 0.0
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630317,
+      "nutrient": {
+        "id": 1257,
+        "number": "605",
+        "name": "Fatty acids, total trans",
+        "rank": 15400,
+        "unitName": "g"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 0.0
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630318,
+      "nutrient": {
+        "id": 1258,
+        "number": "606",
+        "name": "Fatty acids, total saturated",
+        "rank": 9700,
+        "unitName": "g"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 1.32
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630319,
+      "nutrient": {
+        "id": 1292,
+        "number": "645",
+        "name": "Fatty acids, total monounsaturated",
+        "rank": 11400,
+        "unitName": "g"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 5.26
+    },
+    {
+      "type": "FoodNutrient",
+      "id": 13630320,
+      "nutrient": {
+        "id": 1293,
+        "number": "646",
+        "name": "Fatty acids, total polyunsaturated",
+        "rank": 12900,
+        "unitName": "g"
+      },
+      "foodNutrientDerivation": {
+        "code": "LCCS",
+        "description": "Calculated from value per serving size measure",
+        "foodNutrientSource": {
+          "id": 9,
+          "code": "12",
+          "description": "Manufacturer's analytical; partial documentation"
+        }
+      },
+      "amount": 2.63
+    }
+  ],
+  "foodAttributes": [
+    {
+      "id": 1038608,
+      "name": "Nutrient Updated",
+      "value": "4",
+      "foodAttributeType": {
+        "id": 998,
+        "name": "Update Log",
+        "description": "Changes that were made to this food"
+      }
+    },
+    {
+      "id": 1038609,
+      "name": "Nutrient Added",
+      "value": "5",
+      "foodAttributeType": {
+        "id": 998,
+        "name": "Update Log",
+        "description": "Changes that were made to this food"
+      }
+    }
+  ],
+  "modifiedDate": "4/8/2020",
+  "availableDate": "4/8/2020",
+  "marketCountry": "United States",
+  "brandOwner": "MILLVILLE",
+  "gtinUpc": "4099100071115",
+  "dataSource": "LI",
+  "ingredients": "CORN FLOUR, SUGAR, WHOLE GRAIN OAT FLOUR, DEXTROSE, PEANUT BUTTER (PEANUTS, DEXTROSE, MONOGLYCERIDES, SALT), HIGH OLEIC CANOLA OIL, SALT, VEGETABLE JUICE CONCENTRATE (FOR COLOR), CARAMEL COLOR, NATURAL FLAVOR, MIXED TOCOPHEROLS (ADDED TO PRESERVE FRESHNESS). VITAMINS AND MINERALS: REDUCED IRON, NIACINAMIDE, ZINC OXIDE, PYRIDOXINE HYDROCHLORIDE (VITAMIN B6), RIBOFLAVIN (VITAMIN B2), THIAMIN MONONITRATE (VITAMIN B1), FOLIC ACID.",
+  "servingSize": 38,
+  "servingSizeUnit": "g",
+  "labelNutrients": {
+    "fat": { "value": 3.5 },
+    "saturatedFat": { "value": 0.502 },
+    "transFat": { "value": 0.0 },
+    "cholesterol": { "value": 0.0 },
+    "sodium": { "value": 220 },
+    "carbohydrates": { "value": 30.0 },
+    "fiber": { "value": 0.988 },
+    "sugars": { "value": 16.0 },
+    "protein": { "value": 2.0 },
+    "calcium": { "value": 0.0 },
+    "iron": { "value": 3.6 },
+    "potassium": { "value": 0.0 },
+    "addedSugar": { "value": 16.0 },
+    "calories": { "value": 160 }
+  },
+  "tradeChannels": ["NO_TRADE_CHANNEL"],
+  "microbes": [],
+  "brandedFoodCategory": "Cereal",
+  "fdcId": 1124562,
+  "dataType": "Branded",
+  "publicationDate": "11/13/2020",
+  "foodUpdateLog": [
+    {
+      "foodClass": "Branded",
+      "description": "PEANUT BUTTER & JELLY PUFFS SWEETENED CORN & OAT CEREAL, PEANUT BUTTER & JELLY PUFFS",
+      "foodAttributes": [
+        {
+          "id": 1038609,
+          "name": "Nutrient Added",
+          "value": "5",
+          "foodAttributeType": { "id": 998 }
+        },
+        {
+          "id": 1038608,
+          "name": "Nutrient Updated",
+          "value": "4",
+          "foodAttributeType": { "id": 998 }
+        }
+      ],
+      "fdcId": 1124562,
+      "dataType": "Branded",
+      "publicationDate": "11/13/2020"
+    },
+    {
+      "foodClass": "Branded",
+      "description": "PEANUT BUTTER & JELLY PUFFS SWEETENED CORN & OAT CEREAL, PEANUT BUTTER & JELLY PUFFS",
+      "foodAttributes": [
+        {
+          "id": 724174,
+          "name": "Nutrient Updated",
+          "value": "4",
+          "foodAttributeType": { "id": 998 }
+        },
+        {
+          "id": 724172,
+          "name": "Nutrient Removed",
+          "value": "6",
+          "foodAttributeType": { "id": 998 }
+        }
+      ],
+      "fdcId": 906288,
+      "dataType": "Branded",
+      "publicationDate": "5/28/2020"
+    },
+    {
+      "foodClass": "Branded",
+      "description": "PEANUT BUTTER & JELLY PUFFS SWEETENED CORN & OAT CEREAL, PEANUT BUTTER & JELLY PUFFS",
+      "foodAttributes": [],
+      "fdcId": 736582,
+      "dataType": "Branded",
+      "publicationDate": "12/6/2019"
+    }
+  ]
+}
